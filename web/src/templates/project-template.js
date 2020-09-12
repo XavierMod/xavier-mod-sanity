@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer'
 import ButtonBack from '../components/Library/ButtonBack'
 import Button from '../components/Library/Button'
 import Snakke from 'react-snakke'
-import RenderPortableText from '../functions/renderPortableText';
+import RenderPortableText from '../functions/RenderPortableText';
 import { FaTimesCircle, FaCog, FaTags, FaExternalLinkAlt, FaRocket, FaCalendar, FaExclamationTriangle, FaTools } from 'react-icons/fa';
 import { sizes, largerThan, smallerThan } from '../components/Helpers/mediaQueries';
 

@@ -4,7 +4,7 @@ import { sizes, largerThan, smallerThan } from '../components/Helpers/mediaQueri
 import ProfilePic from '../components/Library/ProfilePic';
 import TechStack from '../components/Library/TechStack';
 import {graphql} from 'gatsby'
-import RenderPortableText from '../functions/renderPortableText';
+import RenderPortableText from '../functions/RenderPortableText';
 import Stepper from '../components/Library/Stepper';
 import { FaSmile, FaBriefcase } from 'react-icons/fa';
 import Button from '../components/Library/Button'
