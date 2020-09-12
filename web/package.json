@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.19.7",
     "gatsby-cli": "^2.8.29",
     "gatsby-image": "^2.0.41",
@@ -47,7 +47,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-sitemap": "^2.2.27",
-    "gatsby-plugin-styled-components": "^3.1.19",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-plugin-transition-link": "^1.17.7",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-sharp": "^2.3.14",
@@ -69,7 +69,7 @@
     "react-toggle-button": "^2.2.0",
     "react-toggle-component": "^3.0.8",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.2.0",
     "three": "^0.119.1",
     "troika-three-text": "^0.31.0"
   }
