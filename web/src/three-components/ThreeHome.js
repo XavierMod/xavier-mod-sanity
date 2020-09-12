@@ -11,12 +11,8 @@ import fonts from "./resources/fonts";
 import Button from '../components/Library/Button'
 import MouseMoveCamera from './effects/MouseMoveCamera';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { window, document, exists } from 'browser-monads';
 
-const module = require("module") // Error
-// Wrap the require in check for window
-if (typeof window !== `undefined`) {
-  const module = require("module")
-}
 
 extend({ OrbitControls });
 extend({ Text });
