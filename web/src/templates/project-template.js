@@ -11,6 +11,7 @@ import Snakke from 'react-snakke'
 import RenderPortableText from '../functions/RenderPortableText';
 import { FaTimesCircle, FaCog, FaTags, FaExternalLinkAlt, FaRocket, FaCalendar, FaExclamationTriangle, FaTools } from 'react-icons/fa';
 import { sizes, largerThan, smallerThan } from '../components/Helpers/mediaQueries';
+import {theme} from '../theme/theme';
 
 const ImgWrapper = styled.div`
     position: relative;
@@ -30,7 +31,7 @@ const ProjectHeader = styled.div`
     display: flex;
     height: 122px;
     align-items: center;
-    background: ${props => props.theme.colors.darkBackground};
+    background: ${theme.colors.darkBackground};
     padding: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -42,7 +43,7 @@ const ProjectHeader = styled.div`
 `;
 
 const ProjectSubHeader = styled.div`
-    background: ${props => props.theme.colors.darkBackground};
+    background: ${theme.colors.darkBackground};
     margin-top: 122px;
     display: flex;
     justify-content: flex-start;
@@ -165,7 +166,7 @@ const Body = styled.div`
 
 const NoImage = styled.div`
     height: 200px !important;
-    background: ${props => props.theme.colors.darkBackground};
+    background: ${theme.colors.darkBackground};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +175,7 @@ const NoImage = styled.div`
 `;
 
 const Tag = styled.span`
-    background: ${props => props.theme.colors.mainBackground};
+    background: ${theme.colors.mainBackground};
     font-size: 12px;
     border: 1px solid white;
     padding: 3px 10px;
