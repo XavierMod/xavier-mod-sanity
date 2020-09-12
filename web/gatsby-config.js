@@ -16,6 +16,7 @@ module.exports = {
     siteUrl: 'https://www.xaviermod.com'
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
@@ -27,7 +28,6 @@ module.exports = {
         overlayDrafts: !isProd
       }
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
