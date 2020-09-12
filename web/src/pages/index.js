@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import SEO from '../components/SEO';
 import NavBar from '../components/NavBar/NavBar';
 import MobileHeader from '../components/Headers/MobileHeader'
 import WordsPattern from '../components/Landing/WordsPattern';
@@ -58,7 +57,6 @@ class index extends Component {
         render () {
             return (
                 <>
-                    <SEO title="Home" description="Xavier Mod's Landing page." />
                     <MobileWrapper>
                         <MobileHeader />
                         <WordsPatternWrapper>

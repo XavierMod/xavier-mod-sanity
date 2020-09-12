@@ -3,7 +3,6 @@ import Layout from '../components/Layout/Layout'
 import styled from 'styled-components';
 import H3 from '../components/Library/Style/H3';
 import {useStaticQuery, graphql} from 'gatsby';
-import SEO from '../components/SEO';
 import RenderProjects from '../components/Projects/RenderProjects';
 import ProjectsNavBar from '../components/Projects/ProjectsNavBar';
 import Footer from '../components/Footer/Footer';
@@ -20,7 +19,6 @@ const Projects = (props) => {
 
     return (
         <ProjectsWrapper>
-            <SEO title="Projects" />
             <ProjectsNavBar 
                 setActiveTab={(el) => setActiveTab(el)}
                 activeTab={activeTab}

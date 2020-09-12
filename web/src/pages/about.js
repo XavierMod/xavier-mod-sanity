@@ -1,6 +1,5 @@
 import React, {Component, useState} from 'react'
 import styled from 'styled-components';
-import SEO from '../components/SEO';
 import { sizes, largerThan, smallerThan } from '../components/Helpers/mediaQueries';
 import ProfilePic from '../components/Library/ProfilePic';
 import TechStack from '../components/Library/TechStack';
@@ -131,7 +130,6 @@ const About = (props) => {
 
     return (
         <>
-            <SEO title="About" />
             <AboutPageWrapper>
                 <BCWrapper>
                     <Breadcrumbs currentRoute="About Me" />

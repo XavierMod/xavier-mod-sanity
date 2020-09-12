@@ -7,7 +7,6 @@ import H3 from '../components/Library/Style/H3'
 import Footer from '../components/Footer/Footer'
 import ButtonBack from '../components/Library/ButtonBack'
 import Button from '../components/Library/Button'
-import SEO from '../components/SEO';
 import Snakke from 'react-snakke'
 import RenderPortableText from '../functions/renderPortableText';
 import { FaTimesCircle, FaCog, FaTags, FaExternalLinkAlt, FaRocket, FaCalendar, FaExclamationTriangle, FaTools } from 'react-icons/fa';
@@ -260,7 +259,6 @@ const projectTemplate = ({data}) => {
 
     return (
         <ProjectTemplateWrapper>  
-            <SEO title={title} />
             <ProjectHeader>
                 <ButtonBack route="/projects" direction="right" rotation="rotate(180deg)"/>
                 <ProjectTitle>
