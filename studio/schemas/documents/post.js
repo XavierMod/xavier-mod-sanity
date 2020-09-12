@@ -3,7 +3,8 @@ import {format} from 'date-fns'
 export default {
   name: 'post',
   type: 'document',
-  title: 'Blog Post',
+  title: 'Post',
+  __experimental_actions: ['update', 'publish'],
   fields: [
     {
       name: 'title',
@@ -46,19 +47,6 @@ export default {
       of: [
         {
           type: 'authorReference'
-        }
-      ]
-    },
-    {
-      name: 'categories',
-      type: 'array',
-      title: 'Categories',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'category'
-          }
         }
       ]
     },

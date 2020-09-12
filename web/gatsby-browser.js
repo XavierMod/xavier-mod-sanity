@@ -1,7 +1,14 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import Theming from './src/theme/Theming'
+import ResponsiveHeader from './src/components/Headers/ResponsiveHeader'
+import './src/styles/animations/reveal.css';
+import './src/styles/animations/basic.css';
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => {
+  return (
+    <Theming>
+        <ResponsiveHeader />
+        {element}
+    </Theming>
+  )
+}

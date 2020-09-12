@@ -13,24 +13,71 @@ export default {
       name: 'description',
       type: 'text',
       title: 'Description',
-      description: 'Describe your blog for search engines and social media.'
+      description: 'Describing my site for search engines and social media.'
+    },
+    {
+      name: 'footer',
+      title: 'Footer',
+      type: 'array',
+      of: [
+        {
+          type: 'block'
+        }
+      ]
     },
     {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',
-      description: 'Add keywords that describes your blog.',
+      description: 'Keywords that describe my site.',
       of: [{type: 'string'}],
       options: {
         layout: 'tags'
       }
     },
     {
-      name: 'author',
-      type: 'reference',
-      description: 'Publish an author and set a reference to them here.',
-      title: 'Author',
-      to: [{type: 'author'}]
+      name: 'aboutTitle',
+      type: 'string',
+      title: 'About Title',
+      description: 'Main title displayed on the About page.'
+    },
+    {
+      name: 'contentDescription',
+      title: 'About Description',
+      type: 'array',
+      description: 'Description blocks displayed on the About page.',
+      of: [
+        {
+          type: 'block'
+        }
+      ]
+    },
+    {
+      name: 'experience',
+      title: 'About Experience',
+      type: 'array',
+      description: 'Experience blocks displayed on the About page.',
+      of: [
+        {
+          type: 'block'
+        }
+      ]
+    },
+    {
+      name: 'education',
+      title: 'About Education',
+      type: 'array',
+      description: 'Education blocks displayed on the About page.',
+      of: [
+        {
+          type: 'block'
+        }
+      ]
+    },
+    {
+      title: 'Main Image',
+      name: 'mainImage',
+      type: 'image',
     }
   ]
 }

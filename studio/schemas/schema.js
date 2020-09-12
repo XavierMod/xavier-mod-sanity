@@ -10,6 +10,11 @@ import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import project from './documents/project'
+import projectBody from './documents/project/projectBody'
+import projectLinks from './documents/project/projectLinks'
+import types from './documents/types'
+import techStackBlock from './documents/techStack/techStackBlock'
+import hubOptions from './documents/hubOptions'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -17,6 +22,7 @@ import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
+import projectAdditionalInfo from './documents/project/projectAdditionalInfo'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,9 +34,15 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
+    hubOptions,
     post,
     category,
     project,
+    projectBody,
+    projectLinks,
+    projectAdditionalInfo,
+    techStackBlock,
+    types,
     author,
     mainImage,
     authorReference,

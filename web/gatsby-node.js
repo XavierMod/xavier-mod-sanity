@@ -1,26 +1,35 @@
 const {isFuture} = require('date-fns')
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+
 
 const {format} = require('date-fns')
 
 async function createBlogPostPages (graphql, actions) {
   const {createPage} = actions
   const result = await graphql(`
-    {
-      allSanityPost(
-        filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-      ) {
+    query {
+      projects: allSanityProject(sort: { fields: [date], order: ASC }) {
         edges {
           node {
+            title
             id
-            publishedAt
-            slug {
-              current
+            slug
+            masterFeaturedProject
+            date
+            typeTags {
+              typeID
             }
+            descriptionShort
+            _rawLinks
+            _rawDescription
+            _rawProjectBody
+            featuredImage {
+                asset {
+                    fluid {
+                      src
+                    }
+                }
+            }
+            _rawProjectAdditionalInfo
           }
         }
       }
@@ -29,19 +38,19 @@ async function createBlogPostPages (graphql, actions) {
 
   if (result.errors) throw result.errors
 
-  const postEdges = (result.data.allSanityPost || {}).edges || []
+  const postEdges = (result.data.projects || {}).edges || []
 
   postEdges
-    .filter(edge => !isFuture(edge.node.publishedAt))
     .forEach((edge, index) => {
       const {id, slug = {}, publishedAt} = edge.node
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/blog/${dateSegment}/${slug.current}/`
+      const path = `/projects/${slug}/`
 
       createPage({
         path,
-        component: require.resolve('./src/templates/blog-post.js'),
-        context: {id}
+        component: require.resolve('./src/templates/project-template.js'),
+        context: {
+          slug: slug
+        }
       })
     })
 }
