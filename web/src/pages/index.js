@@ -28,6 +28,10 @@ const DesktopWrapper = styled.div`
     width: 100%;
     height: 100vh !important;
     margin: auto;
+
+    ${smallerThan.tablet`
+        display: block;
+    `};
 `;
 
 const DrawingPatternWrapper = styled.div`
@@ -57,7 +61,7 @@ class index extends Component {
         render () {
             return (
                 <>
-                    <MobileWrapper>
+                    {/*<MobileWrapper>
                         <MobileHeader />
                         <WordsPatternWrapper>
                             <WordsPattern />
@@ -74,7 +78,7 @@ class index extends Component {
                             </AniLink>
                         </TextCenter>
                         <Drawing />
-                    </MobileWrapper>
+                    </MobileWrapper>*/}
                     <DesktopWrapper>
                         <ThreeHome />
                         <SocialLinks />

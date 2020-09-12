@@ -12,7 +12,7 @@ import Button from '../components/Library/Button'
 import MouseMoveCamera from './effects/MouseMoveCamera';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { window, document, exists } from 'browser-monads';
-
+import {Link} from 'gatsby'; 
 
 extend({ OrbitControls });
 extend({ Text });
@@ -33,6 +33,19 @@ const ButtonWrapper = styled.div`
     z-index: 1;
     width: 100%;
     text-align: center;
+`;
+
+const TextCenter = styled.div`
+    text-align: center;
+    padding-top: 300px;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+
+    p {
+        margin: 20px 0;
+    }
 `;
 
 function App() {
@@ -72,21 +85,23 @@ function App() {
 
   return (
     <AppWrapper>
-    <ButtonWrapper>
-    <AniLink paintDrip hex="#21252b" to="about" duration={1}>
-      <Button 
+    <TextCenter>
+        <h1>I'm Xavier Mod</h1>
+        <p>I build things. Oh boy it’s great!</p>
+        <Link to="hub">
+        <Button 
             type="primary" 
             body="Come on in"
             width="180px"
-            iconSource="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMCAyM2gydjFoLTIwdi0xaDJ2LTIzaDE2djIzem0tMS0yMmgtMTR2MjJoMTRsLTEwLTEuOTU0di0xOC4wMTVsMTAtMi4wMzF6bS03IDExaC0ydjFoMnYtMXoiLz48L3N2Zz4=" />
-    </AniLink>
-    </ButtonWrapper>
+            iconSource="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMCAyM2gydjFoLTIwdi0xaDJ2LTIzaDE2djIzem0tMS0yMmgtMTR2MjJoMTRsLTEwLTEuOTU0di0xOC4wMTVsMTAtMi4wMzF6bS03IDExaC0ydjFoMnYtMXoiLz48L3N2Zz4=" />                            
+        </Link>
+    </TextCenter>
   <Canvas 
   pixelRatio={window.devicePixelRatio / 2}
   camera={{ fov: 15, position: [init.iniX, init.iniY, init.iniZ] }}>      
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <text
+      {/*<text
           position-z={1}
           position-y={1}
           position-x={0.4}
@@ -115,14 +130,14 @@ function App() {
           {opts.materialType === "MeshPhongMaterial" ? (
             <meshPhongMaterial attach="material" color={opts.color} />
           ) : null}
-        </text>
+        </text>*/}
       <Terrain />
-      <MouseMoveCamera init={init} />
-      <EffectComposer>
+      {/*<MouseMoveCamera init={init} />*/}
+      {/*<EffectComposer>
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
         <Noise opacity={0.02} />
         <Vignette eskil={false} offset={0.1} darkness={1.1} />
-      </EffectComposer>
+      </EffectComposer>*/}
     </Canvas>
     </AppWrapper>
   );
