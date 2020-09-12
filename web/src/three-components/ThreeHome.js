@@ -45,6 +45,7 @@ const TextCenter = styled.div`
 
     p {
         margin: 20px 0;
+        font-size: 16px;
     }
 `;
 

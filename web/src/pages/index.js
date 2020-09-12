@@ -24,37 +24,14 @@ const MobileWrapper = styled.div`
 
 const DesktopWrapper = styled.div`
     display: block;
-    position: relative;
+    position: fixed;
     width: 100%;
-    height: 100vh !important;
+    height: 100% !important;
     margin: auto;
 
     ${smallerThan.tablet`
         display: block;
     `};
-`;
-
-const DrawingPatternWrapper = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: none;
-    opacity: 0.7;
-`;
-
-const WordsPatternWrapper = styled.div`
-    margin: auto;
-    display: block;
-    max-width: 700px;
-`;
-
-const TextCenter = styled.div`
-    text-align: center;
-    padding-top: 300px;
-
-    p {
-        margin: 20px 0;
-    }
 `;
 
 class index extends Component {

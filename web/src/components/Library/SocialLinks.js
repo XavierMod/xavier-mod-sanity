@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { sizes, largerThan, smallerThan } from '../../components/Helpers/mediaQueries';
 
 const SocialLinksWrapper = styled.div`
     width: 100%;
@@ -12,6 +13,10 @@ const SocialLinksWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: -10px;
+
+    ${smallerThan.tablet`
+        justify-content: center;
+    `};
 
     img {
         background: none;
