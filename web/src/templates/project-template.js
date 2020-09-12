@@ -222,6 +222,11 @@ const FooterButtons = styled.div`
     max-width: 1000px;
     margin: auto;
     padding-bottom: 120px;
+
+    ${smallerThan.tablet`
+        padding: 0 30px;
+        padding-bottom: 120px;
+    `};
 `;
 
 const SnakkeWrapperDesktop = styled.div`

@@ -64,7 +64,9 @@ const MobileHeader = () => {
             <ContentLayout>
                 <FlexWrapper>
                     <LogoWrapper>
-                        <Logo />
+                        <Link to="/">
+                            <Logo />
+                        </Link>
                     </LogoWrapper>
                     <ToggleWrapper>
                         <ContactMe target="_blank" href="mailto:hi.xavier.mod@gmail.com">
