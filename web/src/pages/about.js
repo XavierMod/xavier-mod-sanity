@@ -12,6 +12,7 @@ import { FaHiking } from 'react-icons/fa';
 import Img from 'gatsby-image'
 import Breadcrumbs from '../components/Library/Breadcrumbs';
 import Footer from '../components/Footer/Footer';
+import {Link} from 'gatsby'
 
 const AboutContent = styled.div`
     font-family: 'Noto Serif KR';
@@ -23,6 +24,7 @@ const AboutContent = styled.div`
     ${smallerThan.tablet`
         padding: 10px 30px;
         display: block;
+        margin-bottom: 0px;
     `};
 `;
 
@@ -40,14 +42,14 @@ const ImageWrapper = styled.div`
     position: relative;
 
     ${smallerThan.tablet`
-        height: 500px;
+        height: 400px;
     `};
 
     .gatsby-image-wrapper {
         opacity: 0.2;
 
         ${smallerThan.tablet`
-            height: 500px !important;
+            height: 400px !important;
         `};
     }
 
@@ -75,6 +77,7 @@ const TopLine = styled.div`
             white-space: pre-wrap;
             text-align: center;
             padding: 10px;
+            padding-top: 80px;
         }
     `};
 `;
@@ -104,6 +107,11 @@ const Paragraph = styled.div`
     p {
         font-size: 20px;
         letter-spacing: 0.5px;
+
+        ${smallerThan.tablet`
+            font-size: 17px;
+            line-height: 35px;
+        `};
     }
 
     a {
@@ -156,11 +164,13 @@ const About = (props) => {
                         <Paragraph>
                             <RenderPortableText body={_rawContentDescription} />
                         </Paragraph>
-                        <Button 
-                            type="primary"
-                            width="180px" 
-                            body="MORE ABOUT ME"
-                            iconSource="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuODIyIDE4LjA5NmMtMy40MzktLjc5NC02LjY0LTEuNDktNS4wOS00LjQxOCA0LjcyLTguOTEyIDEuMjUxLTEzLjY3OC0zLjczMi0xMy42NzgtNS4wODIgMC04LjQ2NCA0Ljk0OS0zLjczMiAxMy42NzggMS41OTcgMi45NDUtMS43MjUgMy42NDEtNS4wOSA0LjQxOC0zLjA3My43MS0zLjE4OCAyLjIzNi0zLjE3OCA0LjkwNGwuMDA0IDFoMjMuOTlsLjAwNC0uOTY5Yy4wMTItMi42ODgtLjA5Mi00LjIyMi0zLjE3Ni00LjkzNXoiLz48L3N2Zz4=" />
+                        <Link to="/stack">
+                            <Button 
+                                type="primary"
+                                width="180px" 
+                                body="TECH STACK"
+                                iconSource="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuODIyIDE4LjA5NmMtMy40MzktLjc5NC02LjY0LTEuNDktNS4wOS00LjQxOCA0LjcyLTguOTEyIDEuMjUxLTEzLjY3OC0zLjczMi0xMy42NzgtNS4wODIgMC04LjQ2NCA0Ljk0OS0zLjczMiAxMy42NzggMS41OTcgMi45NDUtMS43MjUgMy42NDEtNS4wOSA0LjQxOC0zLjA3My43MS0zLjE4OCAyLjIzNi0zLjE3OCA0LjkwNGwuMDA0IDFoMjMuOTlsLjAwNC0uOTY5Yy4wMTItMi42ODgtLjA5Mi00LjIyMi0zLjE3Ni00LjkzNXoiLz48L3N2Zz4=" />
+                        </Link>
                     </Description>
                 </AboutContent>
                 <AboutContent>
@@ -174,6 +184,7 @@ const About = (props) => {
                         <Button 
                             type="primary"
                             width="180px" 
+                            link="https://www.linkedin.com/in/xavier-mod-22a25964/"
                             body="LINKEDIN"
                             iconSource="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAwdjI0aDI0di0yNGgtMjR6bTggMTloLTN2LTExaDN2MTF6bS0xLjUtMTIuMjY4Yy0uOTY2IDAtMS43NS0uNzktMS43NS0xLjc2NHMuNzg0LTEuNzY0IDEuNzUtMS43NjQgMS43NS43OSAxLjc1IDEuNzY0LS43ODMgMS43NjQtMS43NSAxLjc2NHptMTMuNSAxMi4yNjhoLTN2LTUuNjA0YzAtMy4zNjgtNC0zLjExMy00IDB2NS42MDRoLTN2LTExaDN2MS43NjVjMS4zOTctMi41ODYgNy0yLjc3NyA3IDIuNDc2djYuNzU5eiIvPjwvc3ZnPg==" />
                     </Description>
@@ -188,6 +199,7 @@ const About = (props) => {
                         </Paragraph>
                     </Description>
                 </AboutContent>
+                <br />
                 <br />
                 <br />
                 <Footer />

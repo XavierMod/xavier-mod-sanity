@@ -9,6 +9,11 @@ const MainWrapper = styled.div`
     bottom: 0;
     padding: 30px;
     min-width: 95%;
+
+    ${smallerThan.tablet`
+        padding: 10px;
+    `};
+    
 `;
 
 const Images = styled.div`

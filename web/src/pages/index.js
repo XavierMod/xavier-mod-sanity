@@ -30,22 +30,47 @@ const DesktopWrapper = styled.div`
     margin: auto;
 
     ${smallerThan.tablet`
-        display: block;
+        display: none;
     `};
+`;
+
+const DrawingPatternWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    opacity: 0.7;
+`;
+
+const WordsPatternWrapper = styled.div`
+    margin: auto;
+    display: block;
+    max-width: 700px;
+`;
+
+const TextCenter = styled.div`
+    text-align: center;
+    padding-top: 300px;
+
+    p {
+        margin: 20px 0;
+        font-size: 15px;
+        padding: 0 30px;
+    }
 `;
 
 class index extends Component {
         render () {
             return (
                 <>
-                    {/*<MobileWrapper>
+                    <MobileWrapper>
                         <MobileHeader />
                         <WordsPatternWrapper>
                             <WordsPattern />
                         </WordsPatternWrapper>
                         <TextCenter>
                             <h1>I'm Xavier Mod</h1>
-                            <p>I build things. Oh boy it’s great!</p>
+                            <p>Front-End dev with a passion for technology and design.</p>
                             <AniLink paintDrip to="hub" hex="#21252b" duration={1}>
                             <Button 
                                 type="primary" 
@@ -55,7 +80,7 @@ class index extends Component {
                             </AniLink>
                         </TextCenter>
                         <Drawing />
-                    </MobileWrapper>*/}
+                    </MobileWrapper>
                     <DesktopWrapper>
                         <ThreeHome />
                         <SocialLinks />

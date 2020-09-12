@@ -88,7 +88,7 @@ function App() {
     <AppWrapper>
     <TextCenter>
         <h1>I'm Xavier Mod</h1>
-        <p>I build things. Oh boy it’s great!</p>
+        <p>Front-End dev with a passion for technology and design.</p>
         <Link to="hub">
         <Button 
             type="primary" 
